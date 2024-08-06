@@ -1,0 +1,68 @@
+body{
+    background-color: #ffee32;
+}
+.clear{
+    clear: both;
+}
+/*header*/
+.menu{
+    width: 100%;
+    height: 5%;
+    background-color: #333533;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+}
+.menu-item{
+    float: left;
+    list-style: none;
+}
+.menu-item a{
+    padding: 15px;
+    margin: 5px;
+    text-decoration: none;
+    text-align: center;
+    color: #d6d6d6;
+}
+.menu-item a:hover{
+    color: #ffee32;
+    transition: color .2s;
+}
+.portada{
+    margin-top:15%;
+    margin-bottom: 15%;
+    text-align: center;
+}
+/*MAIN*/
+/*proyectos*/
+#proyectos{
+    padding: 15px;
+    display: block;
+    background-color: #d6d6d6;
+    text-align: center;
+}
+.contenedor-tarjetas{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    
+}
+.tarjeta{
+    width: 90%;
+    height: auto;
+    margin: 5% 5%;
+    background-color: #FFF;
+    float: left;
+}
+.tarjeta img{
+    width: 100%;
+    height: 80%;
+}
+.tarjeta p{
+    width: 100%;
+    height: 20%;
+}
+
+/*habilidades*/
+/*acerca de*/
+/*contacto*/
