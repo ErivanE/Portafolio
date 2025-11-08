@@ -1,68 +1,142 @@
-body{
-    background-color: #ffee32;
-}
-.clear{
-    clear: both;
-}
-/*header*/
-.menu{
-    width: 100%;
-    height: 5%;
-    background-color: #333533;
-    padding: 15px;
-    position: fixed;
-    top: 0;
-}
-.menu-item{
-    float: left;
-    list-style: none;
-}
-.menu-item a{
-    padding: 15px;
-    margin: 5px;
-    text-decoration: none;
-    text-align: center;
-    color: #d6d6d6;
-}
-.menu-item a:hover{
-    color: #ffee32;
-    transition: color .2s;
-}
-.portada{
-    margin-top:15%;
-    margin-bottom: 15%;
-    text-align: center;
-}
-/*MAIN*/
-/*proyectos*/
-#proyectos{
-    padding: 15px;
-    display: block;
-    background-color: #d6d6d6;
-    text-align: center;
-}
-.contenedor-tarjetas{
-    width: 90%;
-    height: auto;
-    margin: auto;
+/* style.css */
+
+/* 1. Variables de Color y Tipografía */
+:root {
+    /* Define un color de acento profesional (ej. un azul brillante) */
+    --accent-color: #0a84ff; 
     
-}
-.tarjeta{
-    width: 90%;
-    height: auto;
-    margin: 5% 5%;
-    background-color: #FFF;
-    float: left;
-}
-.tarjeta img{
-    width: 100%;
-    height: 80%;
-}
-.tarjeta p{
-    width: 100%;
-    height: 20%;
+    /* Variables de Bootstrap sobreescritas para el tema oscuro */
+    --bs-body-bg: #121212; /* Fondo principal muy oscuro */
+    --bs-body-color: #f0f0f0;
+    --bs-border-color: #2a2a2a;
+    --bs-light-rgb: 240, 240, 240;
+    --bs-secondary: #a0a0a0; /* Color de texto secundario */
+    
+    /* Asignar nuestro color de acento al "primary" de Bootstrap */
+    --bs-primary: var(--accent-color);
+    --bs-primary-rgb: 10, 132, 255;
+
+    /* Color para las "tarjetas" */
+    --card-bg: #1a1a1a;
 }
 
-/*habilidades*/
-/*acerca de*/
-/*contacto*/
+/* 2. Estilos Globales */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* 3. Barra de Navegación */
+#navbar {
+    /* Efecto "vidrio" moderno */
+    background-color: rgba(18, 18, 18, 0.85); /* Fondo oscuro con transparencia */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* 4. Sección Hero (Presentación) */
+#hero-section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hero-section h1 {
+    font-size: 3.5rem; /* Tamaño grande */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: var(--accent-color); /* Color de acento */
+    margin-bottom: 1.5rem;
+}
+
+/* 5. Estilos de Secciones */
+.page-section {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.section-title {
+    font-weight: 700;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* 6. Botones de Acción (Call to Action) */
+.cta-button {
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px; /* Forma de píldora */
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px); /* Efecto "levantar" */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 7. Tarjetas de Proyecto (Importante para reclutadores) */
+.project-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--bs-border-color);
+    border-radius: 12px; /* Esquinas redondeadas suaves */
+    overflow: hidden; /* Para que la imagen respete los bordes */
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Se levanta al pasar el mouse */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-color); /* Resalta con el acento */
+}
+
+.project-card .card-body {
+    padding: 1.75rem;
+}
+
+.project-card .card-title {
+    font-weight: 700;
+}
+
+/* 8. Habilidades (listas limpias) */
+.list-group-item {
+    background-color: transparent; /* Fondo transparente */
+    border-bottom: 1px solid var(--bs-border-color);
+    padding: 1rem 0;
+}
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* 9. Badges/Tags de Tecnología */
+.tech-stack .badge {
+    background-color: #333; /* Fondo oscuro para el tag */
+    color: #f0f0f0;
+    padding: 0.4em 0.75em;
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+/* 10. Footer */
+footer {
+    border-top: 1px solid var(--bs-border-color);
+}
